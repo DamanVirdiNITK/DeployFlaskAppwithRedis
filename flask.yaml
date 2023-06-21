@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+    creationTimestamp: null
+    labels:
+        app: flask
+    name: flask
+spec:
+    replicas: 1
+    selector: 
+        matchLabels:
+            app: flask
+    strategy: {}
+    template:
+        metadata:
+            creationTimestamp: null
+            labels:
+                app: flask
+        spec: 
+            containers:
+              - image: damanbawa/preet-image4:preet-image-for-redis4
+                name: preet-image4
+                resources: {}
+status: {}
